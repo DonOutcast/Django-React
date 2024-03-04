@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["sh.aydin <sh.aydin@samolet.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.2"
+djangorestframework = "^3.14.0"
+django-auditlog = "^2.3.0"
+drf-spectacular = "^0.27.1"
+django-cors-headers = "^4.3.1"
+asyncpg = "^0.29.0"
+gunicorn = "^21.2.0"
+psycopg2-binary = "^2.9.9"
+factory-boy = "^3.3.0"
+pytest = "^8.0.2"
+pytest-django = "^4.8.0"
+django-jazzmin = "^2.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+DJANGO_SETTINGS_MODULE = "backend.settings"
