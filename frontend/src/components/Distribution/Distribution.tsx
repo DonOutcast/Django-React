@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DistributionStatistics from "../DistrubutionStatistic";
 
-// Определение типа для объекта распределения
 interface Distribution {
   id: number;
   name: string;
@@ -22,10 +21,7 @@ const DistributionList: React.FC = () => {
       }
     };
     fetchData();
-            // Запускаем опрос статистики каждые 10 секунд
     const intervalId = setInterval(fetchData, 10000);
-
-    // Очистка интервала при размонтировании компонента
     return () => clearInterval(intervalId);
   }, []);
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-// Определение типа для статистики рассылки
 interface DistributionStatisticsProps {
   distributionId: number;
 }
@@ -24,10 +23,8 @@ const DistributionStatistics: React.FC<DistributionStatisticsProps> = ({ distrib
       }
     };
     fetchStatistics();
-        // Запускаем опрос статистики каждые 10 секунд
     const intervalId = setInterval(fetchStatistics, 10000);
 
-    // Очистка интервала при размонтировании компонента
     return () => clearInterval(intervalId);
   }, [distributionId]);
 
